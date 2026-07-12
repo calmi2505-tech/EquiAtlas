@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -10,11 +10,15 @@ body{
     color:#222;
 }
 
+/* ==========================
+   ENCABEZADO
+========================== */
+
 header{
     background:#1b5e20;
     color:white;
     padding:15px 25px;
-    box-shadow:0 3px 8px rgba(0,0,0,.2);
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
 }
 
 .logo{
@@ -35,8 +39,12 @@ header{
 
 .logo p{
     color:#d8f5dd;
-    margin-top:4px;
+    margin-top:5px;
 }
+
+/* ==========================
+   MENÚ
+========================== */
 
 nav{
     display:flex;
@@ -68,6 +76,10 @@ nav button:hover{
 
 }
 
+/* ==========================
+   CONTENIDO
+========================== */
+
 main{
 
     max-width:1400px;
@@ -79,8 +91,10 @@ main{
 
 }
 
+/* ==========================
+   VISOR
+========================== */
+
 #visor{
 
-    background:white;
-    border-radius:15px;
-    box-shadow:0 4px 10px rgba(0,0,0,.15
+    background
