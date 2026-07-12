@@ -30,7 +30,7 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
                     texto.innerHTML = `
 <b>Ubicación:</b> Cabeza.<br><br>
 
-<b>Función:</b> Protege el encéfalo y sostiene las estructuras de la cara.<br><br>
+<b>Función:</b> Protege el encéfalo y sostiene la cara del caballo.<br><br>
 
 <b>Articula con:</b> Mandíbula y primeras vértebras cervicales.
 `;
@@ -46,7 +46,7 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
                     texto.innerHTML = `
 <b>Ubicación:</b> Parte inferior de la cabeza.<br><br>
 
-<b>Función:</b> Permite la masticación y soporta los dientes inferiores.<br><br>
+<b>Función:</b> Permite la masticación y sostiene los dientes inferiores.<br><br>
 
 <b>Articula con:</b> Cráneo.
 `;
@@ -62,135 +62,9 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
                     texto.innerHTML = `
 <b>Ubicación:</b> Cuello.<br><br>
 
-<b>Cantidad:</b> 7 vértebras.<br><br>
+<b>Función:</b> Sostienen la cabeza y permiten una amplia movilidad del cuello.<br><br>
 
-<b>Función:</b> Sostienen la cabeza y permiten el movimiento del cuello.
-`;
-
-                break;
-
-                case "🦴 Escápula":
-
-                    imagen.src = "assets/images/escapula.png";
-
-                    titulo.textContent = "🦴 Escápula";
-
-                    texto.innerHTML = `
-<b>Ubicación:</b> Hombro.<br><br>
-
-<b>Función:</b> Une el miembro anterior con el tronco.
-`;
-
-                break;
-
-                case "🦴 Húmero":
-
-                    imagen.src = "assets/images/humero.png";
-
-                    titulo.textContent = "🦴 Húmero";
-
-                    texto.innerHTML = `
-<b>Ubicación:</b> Brazo.<br><br>
-
-<b>Función:</b> Une la escápula con el radio.
-`;
-
-                break;
-
-                case "🦴 Radio":
-
-                    imagen.src = "assets/images/radio.png";
-
-                    titulo.textContent = "🦴 Radio";
-
-                    texto.innerHTML = `
-<b>Ubicación:</b> Antebrazo.<br><br>
-
-<b>Función:</b> Soporta gran parte del peso.
-`;
-
-                break;
-
-                case "🦴 Carpo":
-
-                    imagen.src = "assets/images/carpo.png";
-
-                    titulo.textContent = "🦴 Carpo";
-
-                    texto.innerHTML = `
-<b>Ubicación:</b> Rodilla del miembro anterior.<br><br>
-
-<b>Función:</b> Permite la flexión y extensión.
-`;
-
-                break;
-
-                case "🦴 Metacarpo":
-
-                    imagen.src = "assets/images/metacarpo.png";
-
-                    titulo.textContent = "🦴 Metacarpo";
-
-                    texto.innerHTML = `
-<b>Ubicación:</b> Debajo del carpo.<br><br>
-
-<b>Función:</b> Transmite el peso hacia el casco.
-`;
-
-                break;
-
-                case "🦴 Pelvis":
-
-                    imagen.src = "assets/images/pelvis.png";
-
-                    titulo.textContent = "🦴 Pelvis";
-
-                    texto.innerHTML = `
-<b>Ubicación:</b> Cadera.<br><br>
-
-<b>Función:</b> Une la columna con los miembros posteriores.
-`;
-
-                break;
-
-                case "🦴 Fémur":
-
-                    imagen.src = "assets/images/femur.png";
-
-                    titulo.textContent = "🦴 Fémur";
-
-                    texto.innerHTML = `
-<b>Ubicación:</b> Muslo.<br><br>
-
-<b>Función:</b> Principal hueso del miembro posterior.
-`;
-
-                break;
-
-                case "🦴 Tibia":
-
-                    imagen.src = "assets/images/tibia.png";
-
-                    titulo.textContent = "🦴 Tibia";
-
-                    texto.innerHTML = `
-<b>Ubicación:</b> Pierna.<br><br>
-
-<b>Función:</b> Soporta el peso entre el fémur y el tarso.
-`;
-
-                break;
-
-                case "🦴 Tarso":
-
-                    imagen.src = "assets/images/tarso.png";
-
-                    titulo.textContent = "🦴 Tarso";
-
-                    texto.innerHTML = `
-<b>Ubicación:</b> Corvejón.<br><br>
-
-<b>Función:</b> Permite la locomoción y absorbe impactos.
+<b>Cantidad:</b> 7 vértebras cervicales.
 `;
 
                 break;
@@ -201,7 +75,8 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
 
                     titulo.textContent = item;
 
-                    texto.innerHTML = "Información disponible próximamente.";
+                    texto.innerHTML =
+                    "La información anatómica de esta estructura estará disponible próximamente.";
 
             }
 
@@ -257,36 +132,65 @@ document.getElementById("oseo").onclick = () => {
 
 document.getElementById("muscular").onclick = () => {
 
-    titulo.textContent = "Sistema Muscular";
-    texto.innerHTML = "En desarrollo.";
-    imagen.src = "assets/images/musculos.png";
-    lista.innerHTML = "";
+    mostrarSistema(
+        "assets/images/musculos.png",
+        "Sistema Muscular",
+        "Principales músculos del caballo.",
+        [
+            "Trapecio",
+            "Braquiocefálico",
+            "Glúteo medio",
+            "Bíceps femoral"
+        ]
+    );
 
 };
 
 document.getElementById("organos").onclick = () => {
 
-    titulo.textContent = "Órganos";
-    texto.innerHTML = "En desarrollo.";
-    imagen.src = "assets/images/organos.png";
-    lista.innerHTML = "";
+    mostrarSistema(
+        "assets/images/organos.png",
+        "Órganos",
+        "Órganos internos del caballo.",
+        [
+            "Corazón",
+            "Pulmones",
+            "Hígado",
+            "Estómago",
+            "Intestino"
+        ]
+    );
 
 };
 
 document.getElementById("respiratorio").onclick = () => {
 
-    titulo.textContent = "Sistema Respiratorio";
-    texto.innerHTML = "En desarrollo.";
-    imagen.src = "assets/images/respiratorio.png";
-    lista.innerHTML = "";
+    mostrarSistema(
+        "assets/images/respiratorio.png",
+        "Sistema Respiratorio",
+        "Órganos encargados de la respiración.",
+        [
+            "Nariz",
+            "Laringe",
+            "Tráquea",
+            "Pulmones"
+        ]
+    );
 
 };
 
 document.getElementById("nervioso").onclick = () => {
 
-    titulo.textContent = "Sistema Nervioso";
-    texto.innerHTML = "En desarrollo.";
-    imagen.src = "assets/images/nervioso.png";
-    lista.innerHTML = "";
+    mostrarSistema(
+        "assets/images/nervioso.png",
+        "Sistema Nervioso",
+        "Sistema nervioso central y periférico.",
+        [
+            "Encéfalo",
+            "Médula espinal",
+            "Nervios craneales",
+            "Nervios espinales"
+        ]
+    );
 
 };
