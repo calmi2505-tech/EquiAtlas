@@ -1,180 +1,118 @@
-const imagen = document.getElementById("imagenCaballo");
-const titulo = document.querySelector("#panel h2");
-const texto = document.getElementById("descripcion");
-const lista = document.getElementById("listaEstructuras");
+li.onclick = () => {
 
-function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
+    switch(item){
 
-    imagen.src = imagenSrc;
-    titulo.textContent = nombre;
-    texto.innerHTML = descripcion;
-
-    lista.innerHTML = "";
-
-    estructuras.forEach(item => {
-
-        const li = document.createElement("li");
-        li.textContent = item;
-        li.style.cursor = "pointer";
-
-        li.onclick = () => {
-
-            switch (item) {
-
-                case "🦴 Cráneo":
-
-                    imagen.src = "assets/images/craneo.png";
-
-                    titulo.textContent = "🦴 Cráneo";
-
-                    texto.innerHTML = `
+        case "🦴 Cráneo":
+            imagen.src = "assets/images/craneo.png";
+            titulo.innerHTML = "🦴 Cráneo";
+            texto.innerHTML = `
 <b>Ubicación:</b> Cabeza.<br><br>
-
-<b>Función:</b> Protege el encéfalo y sostiene la cara del caballo.<br><br>
-
+<b>Función:</b> Protege el encéfalo y sostiene las estructuras de la cara.<br><br>
 <b>Articula con:</b> Mandíbula y primeras vértebras cervicales.
 `;
+        break;
 
-                break;
-
-                case "🦴 Mandíbula":
-
-                    imagen.src = "assets/images/esqueleto.png";
-
-                    titulo.textContent = "🦴 Mandíbula";
-
-                    texto.innerHTML = `
+        case "🦴 Mandíbula":
+            imagen.src = "assets/images/mandibula.png";
+            titulo.innerHTML = "🦴 Mandíbula";
+            texto.innerHTML = `
 <b>Ubicación:</b> Parte inferior de la cabeza.<br><br>
-
 <b>Función:</b> Permite la masticación y soporta los dientes inferiores.<br><br>
-
 <b>Articula con:</b> Cráneo.
 `;
+        break;
 
-                break;
+        case "🦴 Vértebras cervicales":
+            imagen.src = "assets/images/vertebras-cervicales.png";
+            titulo.innerHTML = "🦴 Vértebras cervicales";
+            texto.innerHTML = `
+<b>Ubicación:</b> Cuello.<br><br>
+<b>Función:</b> Sostienen la cabeza y permiten el movimiento del cuello.<br><br>
+<b>Cantidad:</b> 7 vértebras.
+`;
+        break;
 
-                default:
+        case "🦴 Escápula":
+            imagen.src = "assets/images/escapula.png";
+            titulo.innerHTML = "🦴 Escápula";
+            texto.innerHTML = `
+<b>Ubicación:</b> Hombro.<br><br>
+<b>Función:</b> Une el miembro anterior con el tronco.
+`;
+        break;
 
-                    imagen.src = "assets/images/esqueleto.png";
+        case "🦴 Húmero":
+            imagen.src = "assets/images/humero.png";
+            titulo.innerHTML = "🦴 Húmero";
+            texto.innerHTML = `
+<b>Ubicación:</b> Brazo.<br><br>
+<b>Función:</b> Une la escápula con el radio.
+`;
+        break;
 
-                    titulo.textContent = item;
+        case "🦴 Radio":
+            imagen.src = "assets/images/radio.png";
+            titulo.innerHTML = "🦴 Radio";
+            texto.innerHTML = `
+<b>Ubicación:</b> Antebrazo.<br><br>
+<b>Función:</b> Soporta gran parte del peso del miembro anterior.
+`;
+        break;
 
-                    texto.innerHTML =
-                    "La información anatómica de esta estructura estará disponible próximamente.";
+        case "🦴 Carpo":
+            imagen.src = "assets/images/carpo.png";
+            titulo.innerHTML = "🦴 Carpo";
+            texto.innerHTML = `
+<b>Ubicación:</b> Rodilla del miembro anterior.<br><br>
+<b>Función:</b> Permite la flexión y extensión de la articulación.
+`;
+        break;
 
-            }
+        case "🦴 Metacarpo":
+            imagen.src = "assets/images/metacarpo.png";
+            titulo.innerHTML = "🦴 Metacarpo";
+            texto.innerHTML = `
+<b>Ubicación:</b> Debajo del carpo.<br><br>
+<b>Función:</b> Transmite el peso hacia el casco.
+`;
+        break;
 
-        };
+        case "🦴 Pelvis":
+            imagen.src = "assets/images/pelvis.png";
+            titulo.innerHTML = "🦴 Pelvis";
+            texto.innerHTML = `
+<b>Ubicación:</b> Cadera.<br><br>
+<b>Función:</b> Une la columna con los miembros posteriores.
+`;
+        break;
 
-        lista.appendChild(li);
+        case "🦴 Fémur":
+            imagen.src = "assets/images/femur.png";
+            titulo.innerHTML = "🦴 Fémur";
+            texto.innerHTML = `
+<b>Ubicación:</b> Muslo.<br><br>
+<b>Función:</b> Principal hueso del miembro posterior.
+`;
+        break;
 
-    });
+        case "🦴 Tibia":
+            imagen.src = "assets/images/tibia.png";
+            titulo.innerHTML = "🦴 Tibia";
+            texto.innerHTML = `
+<b>Ubicación:</b> Pierna.<br><br>
+<b>Función:</b> Soporta el peso entre el fémur y el tarso.
+`;
+        break;
 
-}
+        case "🦴 Tarso":
+            imagen.src = "assets/images/tarso.png";
+            titulo.innerHTML = "🦴 Tarso";
+            texto.innerHTML = `
+<b>Ubicación:</b> Corvejón.<br><br>
+<b>Función:</b> Permite la locomoción y absorbe impactos.
+`;
+        break;
 
-document.getElementById("caballo").onclick = () => {
-
-    mostrarSistema(
-        "assets/images/caballo.png",
-        "Caballo",
-        "Vista externa del caballo.",
-        [
-            "Cabeza",
-            "Cuello",
-            "Tronco",
-            "Miembros anteriores",
-            "Miembros posteriores",
-            "Cola"
-        ]
-    );
-
-};
-
-document.getElementById("oseo").onclick = () => {
-
-    mostrarSistema(
-        "assets/images/esqueleto.png",
-        "Sistema Óseo",
-        "Sistema formado por los huesos del caballo.",
-        [
-            "🦴 Cráneo",
-            "🦴 Mandíbula",
-            "🦴 Vértebras cervicales",
-            "🦴 Escápula",
-            "🦴 Húmero",
-            "🦴 Radio",
-            "🦴 Carpo",
-            "🦴 Metacarpo",
-            "🦴 Pelvis",
-            "🦴 Fémur",
-            "🦴 Tibia",
-            "🦴 Tarso"
-        ]
-    );
-
-};
-
-document.getElementById("muscular").onclick = () => {
-
-    mostrarSistema(
-        "assets/images/musculos.png",
-        "Sistema Muscular",
-        "Principales músculos del caballo.",
-        [
-            "Trapecio",
-            "Braquiocefálico",
-            "Glúteo medio",
-            "Bíceps femoral"
-        ]
-    );
-
-};
-
-document.getElementById("organos").onclick = () => {
-
-    mostrarSistema(
-        "assets/images/organos.png",
-        "Órganos",
-        "Órganos internos del caballo.",
-        [
-            "Corazón",
-            "Pulmones",
-            "Hígado",
-            "Estómago",
-            "Intestino"
-        ]
-    );
-
-};
-
-document.getElementById("respiratorio").onclick = () => {
-
-    mostrarSistema(
-        "assets/images/respiratorio.png",
-        "Sistema Respiratorio",
-        "Órganos encargados de la respiración.",
-        [
-            "Nariz",
-            "Laringe",
-            "Tráquea",
-            "Pulmones"
-        ]
-    );
-
-};
-
-document.getElementById("nervioso").onclick = () => {
-
-    mostrarSistema(
-        "assets/images/nervioso.png",
-        "Sistema Nervioso",
-        "Sistema nervioso central y periférico.",
-        [
-            "Encéfalo",
-            "Médula espinal",
-            "Nervios craneales",
-            "Nervios espinales"
-        ]
-    );
+    }
 
 };
