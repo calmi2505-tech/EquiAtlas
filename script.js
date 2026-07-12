@@ -1,71 +1,129 @@
 const imagen = document.getElementById("imagenCaballo");
 const titulo = document.querySelector("#panel h2");
-const texto = document.querySelector("#panel p");
+const texto = document.getElementById("descripcion");
+const lista = document.getElementById("listaEstructuras");
 
-function cambiarSistema(imagenSrc, nombre, descripcion) {
+function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
 
     imagen.src = imagenSrc;
     titulo.textContent = nombre;
     texto.textContent = descripcion;
 
+    lista.innerHTML = "";
+
+    estructuras.forEach(item => {
+
+        const li = document.createElement("li");
+        li.textContent = item;
+        lista.appendChild(li);
+
+    });
+
 }
 
-document.getElementById("caballo").addEventListener("click", () => {
+document.getElementById("caballo").onclick = () => {
 
-    cambiarSistema(
+    mostrarSistema(
         "assets/images/caballo.png",
         "Caballo",
-        "Vista externa del caballo. Desde aquí podrás acceder a todos los sistemas anatómicos."
+        "Vista externa del caballo.",
+        [
+            "Cabeza",
+            "Cuello",
+            "Tronco",
+            "Miembros anteriores",
+            "Miembros posteriores",
+            "Cola"
+        ]
     );
 
-});
+};
 
-document.getElementById("oseo").addEventListener("click", () => {
+document.getElementById("oseo").onclick = () => {
 
-    cambiarSistema(
+    mostrarSistema(
         "assets/images/esqueleto.png",
         "Sistema Óseo",
-        "Visualiza todos los huesos del caballo y consulta información detallada de cada uno."
+        "Sistema formado por los huesos del caballo.",
+        [
+            "🦴 Cráneo",
+            "🦴 Mandíbula",
+            "🦴 Vértebras cervicales",
+            "🦴 Escápula",
+            "🦴 Húmero",
+            "🦴 Radio",
+            "🦴 Carpo",
+            "🦴 Metacarpo",
+            "🦴 Pelvis",
+            "🦴 Fémur",
+            "🦴 Tibia",
+            "🦴 Tarso"
+        ]
     );
 
-});
+};
 
-document.getElementById("muscular").addEventListener("click", () => {
+document.getElementById("muscular").onclick = () => {
 
-    cambiarSistema(
+    mostrarSistema(
         "assets/images/musculos.png",
         "Sistema Muscular",
-        "Explora los principales músculos del caballo y conoce su función."
+        "Principales músculos del caballo.",
+        [
+            "Trapecio",
+            "Braquiocefálico",
+            "Glúteo medio",
+            "Bíceps femoral"
+        ]
     );
 
-});
+};
 
-document.getElementById("organos").addEventListener("click", () => {
+document.getElementById("organos").onclick = () => {
 
-    cambiarSistema(
+    mostrarSistema(
         "assets/images/organos.png",
         "Órganos",
-        "Observa la ubicación de los órganos internos del caballo."
+        "Órganos internos del caballo.",
+        [
+            "Corazón",
+            "Pulmones",
+            "Hígado",
+            "Estómago",
+            "Intestino"
+        ]
     );
 
-});
+};
 
-document.getElementById("respiratorio").addEventListener("click", () => {
+document.getElementById("respiratorio").onclick = () => {
 
-    cambiarSistema(
+    mostrarSistema(
         "assets/images/respiratorio.png",
         "Sistema Respiratorio",
-        "Conoce la anatomía del sistema respiratorio equino."
+        "Órganos encargados de la respiración.",
+        [
+            "Nariz",
+            "Laringe",
+            "Tráquea",
+            "Pulmones"
+        ]
     );
 
-});
+};
 
-document.getElementById("nervioso").addEventListener("click", () => {
+document.getElementById("nervioso").onclick = () => {
 
-    cambiarSistema(
+    mostrarSistema(
         "assets/images/nervioso.png",
         "Sistema Nervioso",
-        "Explora la distribución del sistema nervioso del caballo."
+        "Sistema nervioso central y periférico.",
+        [
+            "Encéfalo",
+            "Médula espinal",
+            "Nervios craneales",
+            "Nervios espinales"
+        ]
     );
 
-});
+};
