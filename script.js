@@ -2,68 +2,70 @@ const imagen = document.getElementById("imagenCaballo");
 const titulo = document.querySelector("#panel h2");
 const texto = document.querySelector("#panel p");
 
-document.getElementById("caballo").onclick = () => {
+function cambiarSistema(imagenSrc, nombre, descripcion) {
 
-    imagen.src = "assets/caballo.png";
+    imagen.src = imagenSrc;
+    titulo.textContent = nombre;
+    texto.textContent = descripcion;
 
-    titulo.textContent = "Caballo";
+}
 
-    texto.textContent =
-    "Vista externa del caballo. Desde aquí podrás acceder a todos los sistemas anatómicos.";
+document.getElementById("caballo").addEventListener("click", () => {
 
-};
+    cambiarSistema(
+        "assets/images/caballo.png",
+        "Caballo",
+        "Vista externa del caballo. Desde aquí podrás acceder a todos los sistemas anatómicos."
+    );
 
-document.getElementById("oseo").onclick = () => {
+});
 
-    imagen.src = "assets/esqueleto.png";
+document.getElementById("oseo").addEventListener("click", () => {
 
-    titulo.textContent = "Sistema Óseo";
+    cambiarSistema(
+        "assets/images/esqueleto.png",
+        "Sistema Óseo",
+        "Visualiza todos los huesos del caballo y consulta información detallada de cada uno."
+    );
 
-    texto.textContent =
-    "Visualiza todos los huesos del caballo y consulta la información anatómica de cada uno.";
+});
 
-};
+document.getElementById("muscular").addEventListener("click", () => {
 
-document.getElementById("muscular").onclick = () => {
+    cambiarSistema(
+        "assets/images/musculos.png",
+        "Sistema Muscular",
+        "Explora los principales músculos del caballo y conoce su función."
+    );
 
-    imagen.src = "assets/musculos.png";
+});
 
-    titulo.textContent = "Sistema Muscular";
+document.getElementById("organos").addEventListener("click", () => {
 
-    texto.textContent =
-    "Explora los principales músculos superficiales y profundos del caballo.";
+    cambiarSistema(
+        "assets/images/organos.png",
+        "Órganos",
+        "Observa la ubicación de los órganos internos del caballo."
+    );
 
-};
+});
 
-document.getElementById("organos").onclick = () => {
+document.getElementById("respiratorio").addEventListener("click", () => {
 
-    imagen.src = "assets/organos.png";
+    cambiarSistema(
+        "assets/images/respiratorio.png",
+        "Sistema Respiratorio",
+        "Conoce la anatomía del sistema respiratorio equino."
+    );
 
-    titulo.textContent = "Órganos";
+});
 
-    texto.textContent =
-    "Observa la ubicación de los órganos internos del caballo.";
+document.getElementById("nervioso").addEventListener("click", () => {
 
-};
+    cambiarSistema(
+        "assets/images/nervioso.png",
+        "Sistema Nervioso",
+        "Explora la distribución del sistema nervioso del caballo."
+    );
 
-document.getElementById("respiratorio").onclick = () => {
-
-    imagen.src = "assets/respiratorio.png";
-
-    titulo.textContent = "Sistema Respiratorio";
-
-    texto.textContent =
-    "Consulta la anatomía del sistema respiratorio equino.";
-
-};
-
-document.getElementById("nervioso").onclick = () => {
-
-    imagen.src = "assets/nervioso.png";
-
-    titulo.textContent = "Sistema Nervioso";
-
-    texto.textContent =
-    "Visualiza la distribución principal del sistema nervioso del caballo.";
-
-};
+});
