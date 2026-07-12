@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
@@ -13,7 +13,8 @@ body{
 header{
     background:#1b5e20;
     color:white;
-    padding:15px 30px;
+    padding:15px 25px;
+    box-shadow:0 3px 8px rgba(0,0,0,.2);
 }
 
 .logo{
@@ -33,8 +34,8 @@ header{
 }
 
 .logo p{
-    margin-top:5px;
     color:#d8f5dd;
+    margin-top:4px;
 }
 
 nav{
@@ -55,8 +56,8 @@ nav button{
     border-radius:10px;
     padding:12px 18px;
     cursor:pointer;
-    font-size:15px;
     transition:.3s;
+    font-size:15px;
 
 }
 
@@ -69,7 +70,7 @@ nav button:hover{
 
 main{
 
-    max-width:1300px;
+    max-width:1400px;
     margin:25px auto;
     display:grid;
     grid-template-columns:2fr 1fr;
@@ -82,74 +83,4 @@ main{
 
     background:white;
     border-radius:15px;
-    padding:25px;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
-    text-align:center;
-
-}
-
-#visor img{
-
-    max-width:100%;
-    max-height:650px;
-
-}
-
-#panel{
-
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
-
-}
-
-#panel h2{
-
-    color:#1b5e20;
-    margin-bottom:15px;
-
-}
-
-#panel p{
-
-    line-height:1.8;
-    text-align:justify;
-
-}
-
-@media(max-width:900px){
-
-main{
-
-grid-template-columns:1fr;
-
-}
-
-.logo{
-
-flex-direction:column;
-text-align:center;
-
-}
-
-.logo img{
-
-width:90px;
-height:90px;
-
-}
-
-nav{
-
-padding:10px;
-
-}
-
-nav button{
-
-width:100%;
-
-}
-
-}
+    box-shadow:0 4px 10px rgba(0,0,0,.15
