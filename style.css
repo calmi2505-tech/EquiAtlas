@@ -13,16 +13,28 @@ body{
 header{
     background:#1b5e20;
     color:white;
-    text-align:center;
-    padding:20px;
+    padding:15px 30px;
 }
 
-header h1{
-    font-size:32px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-header p{
-    margin-top:8px;
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+}
+
+.logo h1{
+    font-size:34px;
+}
+
+.logo p{
+    margin-top:5px;
+    color:#d8f5dd;
 }
 
 nav{
@@ -36,62 +48,108 @@ nav{
 }
 
 nav button{
+
     background:#2e7d32;
     color:white;
     border:none;
+    border-radius:10px;
     padding:12px 18px;
-    border-radius:8px;
     cursor:pointer;
     font-size:15px;
     transition:.3s;
+
 }
 
 nav button:hover{
+
     background:#43a047;
+    transform:scale(1.05);
+
 }
 
 main{
-    max-width:1200px;
-    margin:20px auto;
+
+    max-width:1300px;
+    margin:25px auto;
     display:grid;
     grid-template-columns:2fr 1fr;
     gap:20px;
-    padding:15px;
+    padding:20px;
+
 }
 
 #visor{
+
     background:white;
-    border-radius:12px;
-    padding:20px;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
     text-align:center;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
 }
 
 #visor img{
+
     max-width:100%;
-    height:auto;
+    max-height:650px;
+
 }
 
 #panel{
+
     background:white;
-    border-radius:12px;
-    padding:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
 }
 
 #panel h2{
+
     color:#1b5e20;
     margin-bottom:15px;
+
 }
 
 #panel p{
-    line-height:1.6;
+
+    line-height:1.8;
+    text-align:justify;
+
 }
 
 @media(max-width:900px){
 
-    main{
-        grid-template-columns:1fr;
-    }
+main{
+
+grid-template-columns:1fr;
+
+}
+
+.logo{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.logo img{
+
+width:90px;
+height:90px;
+
+}
+
+nav{
+
+padding:10px;
+
+}
+
+nav button{
+
+width:100%;
+
+}
 
 }
