@@ -7,7 +7,7 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
 
     imagen.src = imagenSrc;
     titulo.textContent = nombre;
-    texto.textContent = descripcion;
+    texto.innerHTML = descripcion;
 
     lista.innerHTML = "";
 
@@ -15,6 +15,36 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
 
         const li = document.createElement("li");
         li.textContent = item;
+
+        li.style.cursor = "pointer";
+
+        li.onclick = () => {
+
+            if (item === "🦴 Cráneo") {
+
+                titulo.textContent = "🦴 Cráneo";
+
+                texto.innerHTML = `
+<b>Ubicación:</b> Cabeza.<br><br>
+
+<b>Función:</b> Protege el encéfalo y sostiene la cara del caballo.<br><br>
+
+<b>Articula con:</b> Mandíbula y primeras vértebras cervicales.
+`;
+
+            }
+
+            else {
+
+                titulo.textContent = item;
+
+                texto.innerHTML =
+                "La información anatómica de esta estructura estará disponible próximamente.";
+
+            }
+
+        };
+
         lista.appendChild(li);
 
     });
