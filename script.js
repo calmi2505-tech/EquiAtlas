@@ -19,7 +19,7 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
 
         li.onclick = () => {
 
-            switch(item){
+            switch (item) {
 
                 case "🦴 Cráneo":
 
@@ -28,12 +28,12 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
                     texto.innerHTML = `
 <b>Ubicación:</b> Cabeza.<br><br>
 
-<b>Función:</b> Protege el encéfalo y sostiene las estructuras de la cara.<br><br>
+<b>Función:</b> Protege el encéfalo y sostiene la cara del caballo.<br><br>
 
 <b>Articula con:</b> Mandíbula y primeras vértebras cervicales.
 `;
 
-                break;
+                    break;
 
                 case "🦴 Mandíbula":
 
@@ -47,7 +47,7 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
 <b>Articula con:</b> Cráneo.
 `;
 
-                break;
+                    break;
 
                 default:
 
@@ -93,16 +93,7 @@ document.getElementById("oseo").onclick = () => {
         [
             "🦴 Cráneo",
             "🦴 Mandíbula",
-            "🦴 Vértebras cervicales",
-            "🦴 Escápula",
-            "🦴 Húmero",
-            "🦴 Radio",
-            "🦴 Carpo",
-            "🦴 Metacarpo",
-            "🦴 Pelvis",
-            "🦴 Fémur",
-            "🦴 Tibia",
-            "🦴 Tarso"
+            "🦴 Vértebras cervicales"
         ]
     );
 
