@@ -97,4 +97,128 @@ main{
 
 #visor{
 
-    background
+    background:white;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:650px;
+    padding:20px;
+
+}
+
+#visor img{
+
+    width:100%;
+    max-width:700px;
+    height:550px;
+
+    object-fit:contain;
+
+}
+
+/* ==========================
+   PANEL
+========================== */
+
+#panel{
+
+    background:white;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
+    padding:20px;
+
+}
+
+#panel h2{
+
+    color:#1b5e20;
+    margin-bottom:15px;
+
+}
+
+#panel h3{
+
+    margin-top:20px;
+    margin-bottom:10px;
+    color:#2e7d32;
+
+}
+
+#descripcion{
+
+    line-height:1.7;
+
+}
+
+#listaEstructuras{
+
+    list-style:none;
+    margin-top:10px;
+
+}
+
+#listaEstructuras li{
+
+    padding:10px;
+    margin-bottom:8px;
+
+    background:#f4f4f4;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#listaEstructuras li:hover{
+
+    background:#d9f2dc;
+
+}
+
+/* ==========================
+   CELULAR
+========================== */
+
+@media(max-width:900px){
+
+    .logo{
+
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+    main{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #visor{
+
+        min-height:420px;
+
+    }
+
+    #visor img{
+
+        width:100%;
+        height:350px;
+
+    }
+
+    nav button{
+
+        width:100%;
+
+    }
+
+}
