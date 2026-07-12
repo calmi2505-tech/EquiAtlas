@@ -23,6 +23,8 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
 
                 case "🦴 Cráneo":
 
+                    imagen.src = "assets/images/craneo.png";
+
                     titulo.textContent = "🦴 Cráneo";
 
                     texto.innerHTML = `
@@ -33,9 +35,11 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
 <b>Articula con:</b> Mandíbula y primeras vértebras cervicales.
 `;
 
-                    break;
+                break;
 
                 case "🦴 Mandíbula":
+
+                    imagen.src = "assets/images/esqueleto.png";
 
                     titulo.textContent = "🦴 Mandíbula";
 
@@ -47,9 +51,11 @@ function mostrarSistema(imagenSrc, nombre, descripcion, estructuras) {
 <b>Articula con:</b> Cráneo.
 `;
 
-                    break;
+                break;
 
                 default:
+
+                    imagen.src = "assets/images/esqueleto.png";
 
                     titulo.textContent = item;
 
@@ -93,7 +99,16 @@ document.getElementById("oseo").onclick = () => {
         [
             "🦴 Cráneo",
             "🦴 Mandíbula",
-            "🦴 Vértebras cervicales"
+            "🦴 Vértebras cervicales",
+            "🦴 Escápula",
+            "🦴 Húmero",
+            "🦴 Radio",
+            "🦴 Carpo",
+            "🦴 Metacarpo",
+            "🦴 Pelvis",
+            "🦴 Fémur",
+            "🦴 Tibia",
+            "🦴 Tarso"
         ]
     );
 
